@@ -9,7 +9,10 @@ import './index.css';
 
 function App() {
 
-  const [items, setItems] = useState(JSON.parse(localStorage.getItem('shoopinglist')));
+  // const [items, setItems] = useState(JSON.parse(localStorage.getItem('shoopinglist')));
+  const [items, setItems] = useState(
+    JSON.parse(localStorage.getItem("shoopinglist")) || []
+  );
   const [newItem, setNewItem] = useState('');
   const [search, setSearch] = useState('');
   
